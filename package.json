@@ -1,0 +1,38 @@
+{
+  "name": "bluebridgetechnologies-automation-test",
+  "version": "1.0.0",
+  "description": "Automating testing",
+  "main": "index.js",
+  "scripts": {
+    "wdio": "wdio run src/config/wdio.conf.js",
+    "wdio:doctorExamination": "npm run wdio -- --suite doctorExamination && npm run report",
+    "report": "allure generate ./allure-results --clean && allure open",
+    "lint": "npx eslint src/ --config ./src/config/eslint.config.js",
+    "lint-fix": "prettier -w src/ --config ./src/config/.prettierrc",
+    "lint-check": "prettier -c src/ --config ./src/config/.prettierrc",
+    "prepare": "husky"
+  },
+  "keywords": [],
+  "author": "Aleksejs Urbanovics",
+  "license": "SIABlueBridgeTechnologies",
+  "devDependencies": {
+    "@percy/cli": "^1.28.6",
+    "@percy/webdriverio": "^3.1.1",
+    "@wdio/allure-reporter": "^8.24.2",
+    "@wdio/cli": "^8.35.1",
+    "@wdio/local-runner": "^8.35.1",
+    "@wdio/mocha-framework": "^8.35.0",
+    "@wdio/spec-reporter": "^8.32.4",
+    "allure-commandline": "^2.28.0",
+    "axios": "^1.6.8",
+    "chai": "^4.3.10",
+    "chromedriver": "^121.0.1",
+    "dot-env": "^0.0.1",
+    "eslint": "^9.2.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "husky": "^9.0.11",
+    "jest": "^29.7.0",
+    "mysql2": "^3.9.1",
+    "prettier": "^3.2.5"
+  }
+}

@@ -1,0 +1,46 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+}
+
+button {
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  width: 320px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:disabled {
+  cursor: not-allowed;
+}
+
+.button-text {
+  white-space: nowrap;
+}
+
+.loading-text {
+  position: absolute;
+  left: calc(50% + 113px);
+}
+
+.button.running .button-text {
+  margin-right: 30px;
+}
